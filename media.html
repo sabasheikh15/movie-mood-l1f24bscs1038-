@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media and Info - Movie Mood Finder</title>
+  <link rel="stylesheet" href="media.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>&#127916; Movie Mood Finder</h1>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="media.html" class="current">Media</a>
+      <a href="register.html">Register</a>
+      <a href="services.html">Moods</a>
+      <a href="portfolio.html">Movies</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="page">
+
+    <!-- Image + float + position -->
+    <section class="intro clearfix">
+      <div class="poster-wrap">
+        <img src="images/paddington-2.svg" alt="Paddington 2 poster" class="poster">
+        <span class="badge">Top Pick</span>
+      </div>
+      <h2>Movie of the Day</h2>
+      <p>Paddington 2 is a lovely family comedy. A little bear teaches lessons about
+        friendship, kindness and honesty. If you are in a <b>Happy</b> mood, or want to
+        lift your mood, this movie is a great pick.</p>
+      <p>The image is placed on the left using <code>float: left</code> and the "Top Pick" badge
+        sits on top of it using <code>position: absolute</code>.</p>
+    </section>
+
+    <!-- Video -->
+    <section class="media-box">
+      <h2>Sample Video</h2>
+      <video controls width="480" poster="images/mad-max-fury-road.svg">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </section>
+
+    <!-- Audio -->
+    <section class="media-box">
+      <h2>Sample Soundtrack</h2>
+      <audio controls>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+      </audio>
+    </section>
+
+    <!-- Lists -->
+    <section class="lists">
+      <div class="list-card">
+        <h2>How to choose a movie (Ordered List)</h2>
+        <ol>
+          <li>Open the Home page.</li>
+          <li>Click the Find a Movie button.</li>
+          <li>Pick your mood.</li>
+          <li>Look through the list of movies.</li>
+          <li>Save your favourite movie.</li>
+        </ol>
+      </div>
+      <div class="list-card">
+        <h2>Our Moods (Unordered List)</h2>
+        <ul>
+          <li>Happy</li>
+          <li>Sad</li>
+          <li>Romantic</li>
+          <li>Scared</li>
+          <li>Excited</li>
+          <li>Relaxed</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Box model demo -->
+    <section class="box-demo">
+      <h2>Box Model Demo</h2>
+      <div class="demo-box">Width 300px + padding + border (border-box)</div>
+    </section>
+
+    <!-- Table (overflow) -->
+    <section class="table-section">
+      <h2>Movie Information Table</h2>
+      <div class="table-scroll">
+        <table>
+          <caption>Movies by mood</caption>
+          <thead>
+            <tr><th>Mood</th><th>Movie</th><th>Year</th><th>Genre</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Happy</td><td>Paddington 2</td><td>2017</td><td>Family Comedy</td></tr>
+            <tr><td>Happy</td><td>School of Rock</td><td>2003</td><td>Music Comedy</td></tr>
+            <tr><td>Sad</td><td>Coco</td><td>2017</td><td>Animated Family</td></tr>
+            <tr><td>Sad</td><td>Life Is Beautiful</td><td>1997</td><td>War Drama</td></tr>
+            <tr><td>Romantic</td><td>La La Land</td><td>2016</td><td>Musical Romance</td></tr>
+            <tr><td>Romantic</td><td>About Time</td><td>2013</td><td>Romantic Comedy</td></tr>
+            <tr><td>Scared</td><td>The Conjuring</td><td>2013</td><td>Horror</td></tr>
+            <tr><td>Scared</td><td>A Quiet Place</td><td>2018</td><td>Horror Thriller</td></tr>
+            <tr><td>Excited</td><td>Mad Max: Fury Road</td><td>2015</td><td>Action</td></tr>
+            <tr><td>Excited</td><td>Top Gun: Maverick</td><td>2022</td><td>Action Drama</td></tr>
+            <tr><td>Relaxed</td><td>Ratatouille</td><td>2007</td><td>Animated Comedy</td></tr>
+            <tr><td>Relaxed</td><td>My Neighbor Totoro</td><td>1988</td><td>Animated Fantasy</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Movie Mood Finder | <a href="index.html">Back to Home</a></p>
+  </footer>
+
+</body>
+</html>

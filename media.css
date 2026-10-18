@@ -1,0 +1,141 @@
+/* media.css - Page 2: box model, background-image, display, position, float, overflow */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap");
+
+* { box-sizing: border-box; }   /* border-box: padding and border are counted inside the width */
+
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 1.6;
+  color: #eeeeee;
+  background-color: #14141c;
+  background-image: url("images/pattern.svg");   /* background image */
+}
+
+h1, h2 { font-family: "Bebas Neue", Impact, sans-serif; letter-spacing: 1.5px; font-weight: normal; }
+h2 { color: #f4b942; font-size: 30px; margin-top: 0; }
+a  { color: #f4b942; }
+
+/* ----- Header + nav (gold bar, different from home) ----- */
+.site-header {
+  background: #f4b942;
+  color: #111111;
+  padding: 10px 20px;
+  position: sticky;      /* position: sticky - the header stays at the top while scrolling */
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+.site-header h1 { margin: 0; font-size: 34px; }
+
+.menu a {
+  display: inline-block;   /* display: inline-block */
+  padding: 6px 14px;
+  margin-right: 4px;
+  color: #111111;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+}
+.menu a:hover   { border-bottom-color: #d62839; }
+.menu a.current { background: #111111; color: #f4b942; border-radius: 6px 6px 0 0; }
+
+/* ----- Page wrapper (box model: width, margin, padding) ----- */
+.page {
+  width: 90%;
+  max-width: 950px;
+  margin: 25px auto;
+  padding: 20px;
+  background: rgba(20, 20, 28, 0.92);
+  border: 2px solid #d62839;
+  border-radius: 12px;
+}
+
+section { margin-bottom: 30px; }
+
+/* ----- Float + position ----- */
+.poster-wrap {
+  position: relative;      /* the badge is positioned absolutely inside this box */
+  float: left;             /* float: left - the text wraps around the image */
+  width: 200px;
+  margin: 0 20px 10px 0;
+}
+.poster { display: block; width: 100%; border-radius: 8px; border: 3px solid #f4b942; }
+.badge {
+  position: absolute;      /* position: absolute */
+  top: 10px;
+  right: -10px;
+  padding: 4px 12px;
+  background: #d62839;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+}
+.clearfix { overflow: hidden; }   /* overflow: hidden makes the box contain its floated children */
+
+/* ----- Video / audio boxes ----- */
+.media-box {
+  padding: 15px;
+  background: #1f1f2b;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+video { max-width: 100%; border: 3px solid #f4b942; border-radius: 8px; }
+audio { width: 100%; max-width: 480px; }
+
+/* ----- Lists (display + float) ----- */
+.lists { overflow: hidden; }
+.list-card {
+  float: left;
+  width: 48%;
+  margin-right: 2%;
+  padding: 15px;
+  background: #1f1f2b;
+  border-top: 5px solid #d62839;
+  border-radius: 8px;
+}
+.list-card:last-child { margin-right: 0; border-top-color: #f4b942; }
+ol li, ul li { margin-bottom: 6px; }
+
+/* ----- Box model demo ----- */
+.box-demo { clear: both; }
+.demo-box {
+  width: 300px;
+  height: 100px;
+  margin: 20px auto;       /* margin: space outside the box */
+  padding: 25px;           /* padding: space inside the box */
+  border: 6px dashed #f4b942;
+  background: linear-gradient(135deg, #d62839, #6a0572);
+  text-align: center;
+}
+
+/* ----- Table + overflow scroll ----- */
+.table-scroll {
+  max-height: 260px;
+  overflow: auto;          /* overflow: auto - shows a scrollbar when there are many rows */
+  border: 2px solid #f4b942;
+  border-radius: 8px;
+}
+table { width: 100%; border-collapse: collapse; }
+caption { padding: 8px; font-weight: 600; background: #1f1f2b; }
+th { position: sticky; top: 0; background: #d62839; color: #ffffff; }
+th, td { padding: 10px; text-align: left; border-bottom: 1px solid #444444; }
+tbody tr:nth-child(even) { background: #1f1f2b; }
+tbody tr:hover { background: #3a2a10; }
+
+.site-footer {
+  clear: both;
+  text-align: center;
+  padding: 15px;
+  background: #f4b942;
+  color: #111111;
+}
+.site-footer a { color: #111111; font-weight: 600; }
+
+@media (max-width: 600px) {
+  .poster-wrap { float: none; margin: 0 auto 15px; }
+  .list-card { float: none; width: 100%; margin: 0 0 15px; }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Movie Mood Finder</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+  <header>
+    <h1>&#127916; Movie Mood Finder</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="media.html">Media</a>
+      <a href="register.html">Register</a>
+      <a href="services.html">Moods</a>
+      <a href="portfolio.html">Movies</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Movie Club Registration</h2>
+    <p class="note">Please fill in the form below. Fields marked with <span>*</span> are required.</p>
+
+    <form action="#" method="post">
+
+      <fieldset>
+        <legend>Account Information</legend>
+
+        <label class="req" for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" placeholder="e.g. Ali Khan"
+               required minlength="3" maxlength="40">
+
+        <label for="username">Username (readonly)</label>
+        <input type="text" id="username" name="username" value="movie_fan_001" readonly>
+
+        <label class="req" for="password">Password (min 8 characters)</label>
+        <input type="password" id="password" name="password" required minlength="8" maxlength="20">
+
+        <label class="req" for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="membership">Membership (disabled)</label>
+        <input type="text" id="membership" name="membership" value="Free Member" disabled>
+      </fieldset>
+
+      <fieldset>
+        <legend>Personal Details</legend>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" min="1960-01-01" max="2015-12-31">
+
+        <label for="website">Website / Blog</label>
+        <input type="url" id="website" name="website" placeholder="https://example.com">
+
+        <label for="color">Favourite Colour</label>
+        <input type="color" id="color" name="color" value="#d62839">
+
+        <label for="age">Age (10 - 100)</label>
+        <input type="number" id="age" name="age" min="10" max="100" placeholder="18">
+
+        <label for="watchtime">Usual Movie Time</label>
+        <input type="time" id="watchtime" name="watchtime" value="21:00">
+
+        <label for="hours">Movie hours per week (0 - 20)</label>
+        <input type="range" id="hours" name="hours" min="0" max="20" value="5">
+
+        <label for="photo">Profile Picture</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+      </fieldset>
+
+      <fieldset>
+        <legend>Movie Preferences</legend>
+
+        <label for="mood">Current Mood</label>
+        <select id="mood" name="mood">
+          <option value="happy">Happy</option>
+          <option value="sad">Sad</option>
+          <option value="romantic" selected>Romantic</option>
+          <option value="scared">Scared</option>
+          <option value="excited">Excited</option>
+          <option value="relaxed">Relaxed</option>
+        </select>
+
+        <p class="group-title">Gender</p>
+        <div class="choices">
+          <input type="radio" id="male" name="gender" value="male" checked>
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Other</label>
+        </div>
+
+        <p class="group-title">Favourite Genres</p>
+        <div class="choices">
+          <input type="checkbox" id="g-action" name="genre" value="action" checked>
+          <label for="g-action">Action</label>
+          <input type="checkbox" id="g-comedy" name="genre" value="comedy">
+          <label for="g-comedy">Comedy</label>
+          <input type="checkbox" id="g-horror" name="genre" value="horror">
+          <label for="g-horror">Horror</label>
+        </div>
+
+        <label for="about">Tell us about your movie taste</label>
+        <textarea id="about" name="about" rows="4" maxlength="200"
+                  placeholder="Maximum 200 characters..."></textarea>
+      </fieldset>
+
+      <div class="terms">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the terms and conditions</label>
+      </div>
+
+      <button type="submit">Register Now</button>
+      <button type="reset" class="reset">Clear</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Movie Mood Finder | <a href="index.html">Back to Home</a></p>
+  </footer>
+
+</body>
+</html>

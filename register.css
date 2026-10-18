@@ -1,0 +1,113 @@
+/* register.css - Page 3: attribute selectors, combinators, pseudo-classes, pseudo-elements */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap");
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #f1f1f1;
+  background: linear-gradient(160deg, #1b1030, #0f0f14);
+  min-height: 100vh;
+}
+
+h1, h2 { font-family: "Bebas Neue", Impact, sans-serif; letter-spacing: 2px; font-weight: normal; }
+
+/* ----- Nav: boxed links (different from other pages) ----- */
+header { padding: 15px; text-align: center; background: #2b1055; }
+header h1 { margin: 0 0 10px; font-size: 36px; }
+
+nav a {
+  display: inline-block;
+  margin: 3px;
+  padding: 6px 14px;
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+}
+nav a:hover { background: #ffffff; color: #2b1055; }
+nav a[href="register.html"] { background: #f4b942; color: #111111; border-color: #f4b942; }  /* attribute selector */
+
+main { max-width: 700px; margin: 25px auto; padding: 0 15px; }
+h2 { text-align: center; color: #f4b942; font-size: 38px; margin-bottom: 0; }
+
+/* ----- Pseudo-elements ----- */
+.note { text-align: center; }
+.note::first-letter { font-size: 28px; color: #f4b942; }   /* ::first-letter */
+.note span { color: #ff4d6d; font-weight: bold; }
+label.req::after { content: " *"; color: #ff4d6d; }         /* ::after */
+legend::before   { content: "\1F3AC  "; }                   /* ::before */
+::selection      { background: #f4b942; color: #000000; }   /* ::selection */
+::placeholder    { color: #999999; font-style: italic; }    /* ::placeholder */
+
+/* ----- Combinators ----- */
+form fieldset { margin-bottom: 20px; padding: 15px 20px; border: 2px solid #6a0572; border-radius: 10px; background: rgba(255, 255, 255, 0.05); }   /* descendant */
+fieldset > legend { padding: 0 10px; font-size: 20px; color: #f4b942; font-weight: 600; }                                                        /* child */
+label + input, label + select, label + textarea { margin-top: 4px; }                                                                              /* adjacent sibling */
+.group-title ~ .choices { margin-bottom: 12px; }                                                                                                  /* general sibling */
+
+label { display: block; margin-top: 12px; font-size: 15px; }
+
+/* ----- Attribute selectors ----- */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #1a1a24;
+  border: 2px solid #555555;
+  border-radius: 6px;
+}
+
+input[type="color"] { width: 70px; height: 40px; border: none; background: none; }
+input[type="range"] { width: 100%; accent-color: #d62839; }
+input[type="file"]  { color: #cccccc; }
+input[readonly]     { background-color: #333344; color: #aaaaaa; border-style: dotted; }
+input[disabled]     { opacity: 0.5; cursor: not-allowed; }
+input[required]     { border-left: 6px solid #f4b942; }
+input[type="radio"], input[type="checkbox"] { accent-color: #d62839; width: 18px; height: 18px; vertical-align: middle; }
+
+/* ----- Pseudo-classes: hover, focus, valid, invalid, checked ----- */
+input:hover, select:hover, textarea:hover { border-color: #f4b942; }
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #ffffff;
+  background-color: #2a2a3a;
+  box-shadow: 0 0 10px rgba(244, 185, 66, 0.8);
+}
+input:valid:not(:placeholder-shown), textarea:valid:not(:placeholder-shown) { border-color: #2ecc71; }   /* :valid */
+input:invalid:not(:placeholder-shown) { border-color: #ff4d6d; background-color: #3a1620; }                  /* :invalid */
+input:checked + label { color: #f4b942; font-weight: 600; }                                                  /* :checked */
+
+.choices label { display: inline-block; margin: 0 14px 0 4px; }
+.group-title { margin: 15px 0 4px; font-weight: 600; }
+.terms { margin: 10px 0 20px; }
+.terms label { display: inline-block; }
+
+/* ----- Buttons ----- */
+button {
+  padding: 12px 28px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(90deg, #d62839, #ff6b35);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(214, 40, 57, 0.5);
+}
+button:hover  { background: #f4b942; color: #111111; }
+button:active { transform: scale(0.96); }
+button.reset  { background: #444444; box-shadow: none; }
+
+footer { text-align: center; padding: 15px; background: #2b1055; }
+footer a { color: #f4b942; }
